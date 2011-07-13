@@ -16,7 +16,7 @@
 			
 			// add class hover shit
 		
-			$('#results li').live('mouseover', function() {		    
+			$('#results li').live('click', function() {		    
 			    $(this).addClass('highlight');
 				// $('li').not($('li highlight')).addClass('asd');
 				$('#results li').not(this).addClass('dim'); 			
@@ -35,7 +35,7 @@
 				success: function(results){
 						        
 				    $.each(results.shots , function(i, shots) {
-				    	$('#results').append('<li><span>'+shots.title+'</span><img src="'+ shots.image_url + '" alt="" /></li>' );
+				    	$('#results').append('<li><a href="'+shots.url+'" title=""><span>'+shots.title+'</span></a><img src="'+ shots.image_url + '" alt="" /></li>' );
 				    });
 				    
 				}
@@ -52,14 +52,13 @@
 				    success: function(results){
 				    
 				        $.each(results.shots , function(i, shots) {
-				        	$('#results').append('<li><span>'+shots.title+'</span><img src="'+ shots.image_url + '" alt="" /></li>' );
+				        	$('#results').append('<li><a href="'+shots.url+'" title=""><span>'+shots.title+'</span></a><img src="'+ shots.image_url + '" alt="" /></li>' );
 				        });
 				        
 				    }
 				});
 			i++;	
 			});
-
 
 	//end	
 	});
@@ -71,16 +70,7 @@
 <body> 
 	
 	<h1>Driiiiiiible</h1>
-	
-<!--
-	<select id="shot_type">
-		<option value="1">Select</option>
-		<option value="2">Popular</option>
-		<option value="3">Debuts</option>
-		<option value="4">Everyone</option>
-	</select>
--->
-	
+		
 	<ul id="results">
 	</ul><!--  close -->
 	
