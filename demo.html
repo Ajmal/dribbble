@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head> 
+	<meta http-equiv="Content-Type"
+	content="text/html; charset=utf-8"/>
+
+	<title>Dribble Shot</title>
+
+	<link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+	<link href='http://fonts.googleapis.com/css?family=Nixie+One&v1' rel='stylesheet' type='text/css'>
+	
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		
+		jQuery(document).ready(function() { 
+			
+			// add class hover shit
+		
+			$('#results li').live('click', function() {		    
+			    $(this).addClass('highlight');
+				// $('li').not($('li highlight')).addClass('asd');
+				$('#results li').not(this).addClass('dim'); 			
+			});
+
+			$('#results li').live('mouseout', function() {
+				$(this).removeClass('highlight');
+				$('#results li').not(this).removeClass('dim');
+			});
+			
+			// dribbbbbbble api
+
+			$.ajax({
+				url: "http://api.dribbble.com/shots/popular/?page=1&per_page=15",
+				dataType: 'jsonp',
+				success: function(results){
+						        
+				    $.each(results.shots , function(i, shots) {
+				    	$('#results').append('<li><a href="'+shots.url+'" title=""><span>'+shots.title+'</span></a><img src="'+ shots.image_url + '" alt="" /></li>' );
+				    });
+				    
+				}
+			});		
+			
+			
+			// initialize i for page 2
+			var i=2;
+			$('.load').click(function() {
+
+				$.ajax({
+				    url: "http://api.dribbble.com/shots/popular/?page="+i+"&per_page=15",
+				    dataType: 'jsonp',
+				    success: function(results){
+				    
+				        $.each(results.shots , function(i, shots) {
+				        	$('#results').append('<li><a href="'+shots.url+'" title=""><span>'+shots.title+'</span></a><img src="'+ shots.image_url + '" alt="" /></li>' );
+				        });
+				        
+				    }
+				    
+				});
+
+			i++;	
+			});
+			
+	//end	
+	});
+
+	</script>
+	
+</head>
+
+<body> 
+	
+	<h1>Driiiiiiible</h1>
+		
+	<ul id="results">
+	</ul><!-- #results close -->
+	
+	<a class="load btn green btn-big" href="#load" title="">Load More</a>
+
+</body>
+</html>
