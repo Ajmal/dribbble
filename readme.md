@@ -8,5 +8,5 @@ http://ajmal.github.com/Driiiiiiible/demo.html
 
 #### How to use?
 1. Clone this repo/download it.
-2. Open index.html
+2. Open driiiiiiible.html
 3. Click 'Load More' button
