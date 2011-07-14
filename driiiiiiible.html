@@ -45,8 +45,6 @@
 			// initialize i for page 2
 			var i=2;
 			$('.load').click(function() {
-				$(this).addClass('loader');
-				
 
 				$.ajax({
 				    url: "http://api.dribbble.com/shots/popular/?page="+i+"&per_page=15",
@@ -59,11 +57,8 @@
 				        
 				    }
 				    
-				    
 				});
-	        
-				       			
-				
+
 			i++;	
 			});
 			
@@ -79,7 +74,7 @@
 	<h1>Driiiiiiible</h1>
 		
 	<ul id="results">
-	</ul><!--  close -->
+	</ul><!-- #results close -->
 	
 	<a class="load btn green btn-big" href="#load" title="">Load More</a>
 
