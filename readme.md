@@ -3,8 +3,8 @@ Driiiiiiiible
 
 It is a simple dribbble app to browse popular shots.
 
-#### Screenshot
-http://i.imgur.com/l4zhzl.jpg
+#### Demo
+http://ajmal.github.com/Driiiiiiible/demo.html
 
 #### How to use?
 1. Clone this repo/download it.
