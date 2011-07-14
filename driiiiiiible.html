@@ -45,7 +45,9 @@
 			// initialize i for page 2
 			var i=2;
 			$('.load').click(function() {
+				$(this).addClass('loader');
 				
+
 				$.ajax({
 				    url: "http://api.dribbble.com/shots/popular/?page="+i+"&per_page=15",
 				    dataType: 'jsonp',
@@ -56,10 +58,15 @@
 				        });
 				        
 				    }
+				    
+				    
 				});
+	        
+				       			
+				
 			i++;	
 			});
-
+			
 	//end	
 	});
 

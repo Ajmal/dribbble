@@ -200,3 +200,8 @@ a.btn {
 .green:hover {
 	background-color:#6DD108;
 }
+
+.loader {
+	background: url(loader.gif) no-repeat 10px 10px;
+	padding-left: 40px;
+}
