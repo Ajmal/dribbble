@@ -1,7 +1,7 @@
 Driiiiiiiible
 =============
 
-It is a simple dribbble app to browse popular shots.
+A simple dribbble app to browse popular shots.
 
 #### Demo
 http://ajmal.github.com/Driiiiiiible/demo.html
