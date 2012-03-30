@@ -35,15 +35,15 @@ jQuery(document).ready(function() {
 	}
 
 	function getPost(i, category) {
-		// $.ajax({
-		// 		url: "http://api.dribbble.com/shots/"+category+"/?page="+i+"&per_page=15",
-		// 		dataType: 'jsonp',
-		// 		success: function( results ) {
-		//			$.each(results.shots , function( i, shots ) {
-		// 	    		$('#results').append('<li><a href="'+shots.url+'" title=""><span>'+shots.title+'</span></a><img src="'+ shots.image_url + '" alt="" /></li>' );
-		// 	    	});
-		// 		}
-		// });
+		$.ajax({
+				url: "http://api.dribbble.com/shots/"+category+"/?page="+i+"&per_page=15",
+				dataType: 'jsonp',
+				success: function( results ) {
+					$.each(results.shots , function( i, shots ) {
+			    		$('#results').append('<li><a href="'+shots.url+'" title=""><span>'+shots.title+'</span></a><img src="'+ shots.image_url + '" alt="" /></li>' );
+			    	});
+				}
+		});
 		// console.log(i);
 		// console.log(category);
 		i++;

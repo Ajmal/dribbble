@@ -113,13 +113,17 @@ abbr[title], dfn[title] {
 /*	~lolololol 																	
 --------------------------------------------------------------------------------*/
 #results {
-	margin: 70px 0px 0;
+	margin: 60px 0px 0;
 }
 
 #results li {
+	-webkit-border-radius: 2px;
+	-moz-border-radius: 2px;
+	border-radius: 2px;
+	background: #333;
 	float: left;
 	width: 410px;
-	height: 410px;
+	height: 310px;
 	display: block;
 	opacity:1;
 	-webkit-transition: opacity 300ms ease-in 200ms; /* property duration timing-function delay */
@@ -132,7 +136,7 @@ abbr[title], dfn[title] {
 
 #results li img {
 	padding: 5px;
-	background: #333;
+	
 }
 
 #results li.highlight {
