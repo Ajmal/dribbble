@@ -1,15 +1,14 @@
 Dribbble Viewer
-=============
+===============
 
-A simple dribbble app to browse popular shots.
+##About
+Dribbble Viewer A simple Dribbble application to browse popular shots.
 1. Full size shot
-2. Focus preview (on click)
+2. Infinite scroll
+3. Focus preview (on click)
 
-#### Demo
-http://ajmal.github.com/Driiiiiiible/demo.html
+## Demo
+http://dribbble-viewer.heroku.com/
 
-#### How to use?
-1. Clone this repo/download it.
-2. Open driiiiiiible.html
-3. Click 'Load More' button
-
+### Extra
+It uses Dribbble api, jQuery, and jquery-endless-scroll.
